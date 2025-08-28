@@ -7,69 +7,24 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="container grid grid-2">
-  <div>
-    <p class="muted reveal">Self-Intro</p>
-    <h1 class="reveal">中田 健人 / Kento Nakata</h1>
-    <p class="reveal">“Data × Bizで意思決定を加速”</p>
-    <p class="muted reveal">出身：神奈川県 横浜市｜現在：東京</p>
-    <p class="reveal"><a class="btn" href="#hobbies">趣味を見る</a></p>
-  </div>
-  <div class="reveal" aria-label="プロフィール写真">
-    <div class="avatar"><img src="img/avatar.jpg" alt="中田健人の顔写真"></div>
-  </div>
-</header>
+<header class="header">
+    <nav class="nav">
+        <div class="nav__logo">
+            <h4>Kento Nakata</h4>
+        </div>
+        <ul class="nav__links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Hobbies</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+
+
 
 <main>
-  <section id="about" class="container">
-    <h2>About</h2>
-    <p>BTA専攻。SQLで日次KPI自動抽出、Tableauで部門向けダッシュボード構築。Flutter/DjangoでMVP開発に挑戦中。</p>
-    <p class="muted">価値観：透明性 / 再現性 / ユーザー志向</p>
-  </section>
-
-  <section id="hobbies" class="container">
-    <h2>趣味（Hobbies）</h2>
-    <div class="grid grid-3">
-      <article class="card fade">
-        <h3>サッカー（GK）</h3>
-        <p class="muted">理由：瞬時の判断とチーム連携が楽しい｜頻度：週2・12年｜最近：セットプレー分析</p>
-        <span class="tag">判断力</span><span class="tag">チーム連携</span>
-      </article>
-      <article class="card fade">
-        <h3>ゲーム / VRChat</h3>
-        <p class="muted">理由：世界の人と英会話｜頻度：週3｜最近：企画・撮影</p>
-        <span class="tag">英会話</span><span class="tag">多文化</span>
-      </article>
-      <article class="card fade">
-        <h3>開発学習</h3>
-        <p class="muted">理由：仕組み化が好き｜頻度：毎日｜最近：SQL×GASでKPI自動化</p>
-        <span class="tag">自動化</span><span class="tag">再現性</span>
-      </article>
-    </div>
-  </section>
-
-  <section id="learning" class="container">
-    <h2>今の挑戦</h2>
-    <ul class="muted">
-      <li>CSSアニメーションのアクセシビリティ（prefers-reduced-motion）</li>
-      <li>transform/opacity限定でのパフォーマンス最適化</li>
-    </ul>
-  </section>
-
-  <section id="build" class="container">
-    <h2>制作ログ（苦労と乗り越え）</h2>
-    <ul>
-      <li><strong>情報の邪魔問題：</strong>アニメが目立ちすぎ → 初回入場のみ・0.6sに短縮。</li>
-      <li><strong>パフォーマンス：</strong>transform/opacityに限定してカクつき回避。</li>
-      <li><strong>配慮：</strong><code>prefers-reduced-motion</code>で自動停止を実装。</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p><a class="btn" href="mailto:you@example.com">メールする</a>
-       <a class="btn btn-dark" href="https://github.com/yourid">GitHub</a></p>
-  </section>
+  
 </main>
 
 <footer class="container muted">© 2025 Kento Nakata</footer>
