@@ -228,6 +228,18 @@ button:hover {
     position: relative;
   }
   
+  .about__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+  }
+  
   .about__grid {
     display: grid;
     gap: 1.5rem;
@@ -260,23 +272,19 @@ button:hover {
     object-fit: cover;
   }
   
-  .about__body p {
+  .about__body h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
     margin: 0 0 1rem;
+    border-left: 4px solid #667eea;
+    padding-left: 1rem;
+  }
+
+  .about__body p {
+    margin: 0 0 2rem;
     line-height: 1.8;
     color: #444;
-  }
-  
-  .about__facts {
-    list-style: none;
-    margin: .5rem 0 0;
-    padding: 0;
-    display: grid;
-    gap: .4rem;
-  }
-  
-  .about__facts li {
-    color: #555;
-    font-size: .95rem;
   }
   
   .about__em {
@@ -286,11 +294,15 @@ button:hover {
   
   /*Hobbiesのスタイル*/
 .hobbies {
-    background: #fff;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     color: #222;
-    padding: clamp(2rem, 8vh, 5rem) 20px;
+    padding: clamp(3rem, 10vh, 6rem) 20px;
     position: relative;
     z-index: 10;
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: 0 0 40px rgba(0,0,0,0.08);
+    backdrop-filter: blur(10px);
 }
 
 .hobbies__inner {
@@ -302,17 +314,55 @@ button:hover {
     text-align: center;
     font-weight: 800;
     letter-spacing: .12em;
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    margin: 0 0 3rem;
+    color: #000;
+    position: relative;
+}
+
+.hobbies__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.hobbies__grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.hobbies__content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 1rem;
+    border-left: 4px solid #667eea;
+    padding-left: 1rem;
+}
+
+.hobbies__content p {
     margin: 0 0 2rem;
+    line-height: 1.8;
+    color: #444;
 }
 
 /*Contactのスタイル*/
 .contact {
-    background: #fff;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     color: #222;
-    padding: clamp(2rem, 8vh, 5rem) 20px;
+    padding: clamp(3rem, 10vh, 6rem) 20px;
     position: relative;
     z-index: 10;
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: 0 0 40px rgba(0,0,0,0.08);
+    backdrop-filter: blur(10px);
 }
 
 .contact__inner {
@@ -324,7 +374,75 @@ button:hover {
     text-align: center;
     font-weight: 800;
     letter-spacing: .12em;
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-    margin: 0 0 2rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    margin: 0 0 3rem;
+    color: #000;
+    position: relative;
 }
-  
+
+.contact__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.contact__grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.contact__content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 1rem;
+    border-left: 4px solid #667eea;
+    padding-left: 1rem;
+}
+
+.contact__content p {
+    margin: 0 0 2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.contact__facts {
+    list-style: none;
+    margin: .5rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: .4rem;
+}
+
+.contact__facts li {
+    color: #555;
+    font-size: .95rem;
+}
+
+.contact__em {
+    color: #111;
+    font-weight: 700;
+}
+
+.contact__link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.contact__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
