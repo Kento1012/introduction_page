@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
 
-/*ナビゲーションバーのスタイル*/
-
+/*全体のスタイル*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,10 +14,9 @@ li, a, button {
     text-decoration: none;
 }
 
+/*ナビゲーションバーのスタイル*/
+
 .header {
-    padding: 20px 10%;
-    background: transparent;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,6 +26,7 @@ li, a, button {
     display: none;
 }
 
+/*ナビゲーション３本線のスタイル*/
 .nav__hamburger {
     display: flex;
     flex-direction: column;
@@ -39,6 +38,8 @@ li, a, button {
     right: 20px;
 }
 
+/*ナビゲーション３本線（１本づつ）のスタイル*/
+
 .nav__hamburger span {
     width: 25px;
     height: 3px;
@@ -47,6 +48,8 @@ li, a, button {
     transition: 0.3s;
     border-radius: 2px;
 }
+
+/*ナビゲーションクリック後の×のスタイル*/
 
 .nav__checkbox:checked ~ .nav__hamburger span:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
@@ -60,38 +63,17 @@ li, a, button {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
 
-
-.nav__title {
-    color: #000000;
-    cursor: pointer;
-    font-size: 24px;
-    margin-left: 0;
-}
-
-.text {
-    display: inline-block;
-    letter-spacing: 5px;
-    line-height: 1.2;
-}
-
-/* タイピング（横幅を伸ばす） */
+/* タイピングアニメーション（横幅を伸ばす） */
 @keyframes typing {
     from { width: 0 }
     to { width: 14ch }
 }
   
-  /* カーソル点滅 */
+  /* カーソル点滅アニメーション */
 @keyframes cursor {
     50% { border-color: transparent }
 }
-
-
 
 .nav__links {
     list-style: none;
@@ -120,9 +102,10 @@ li, a, button {
 }
 
 .nav__links li {
-    display: inline;
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
+
+/*ナビゲーションリンクのスタイル*/
 
 .nav__links li a {
     transition: all 0.3s ease 0s;
@@ -130,19 +113,6 @@ li, a, button {
 
 .nav__links li a:hover {
     color: #77ea8e;
-}
-
-button {
-    padding: 9px 25px;
-    background-color: rgb(139, 233, 143);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover {
-    background-color: rgba(0, 169, 85, 0.8);
 }
 
 .top_picture {
@@ -158,6 +128,7 @@ button:hover {
     margin-bottom: 0;
 }
 
+/*top_pictureの背景のスタイル*/
 .top_picture::before {
     content: '';
     position: absolute;
@@ -169,6 +140,7 @@ button:hover {
     z-index: 1;
 }
 
+/*top_pictureの名前のスタイル*/
 .top_picture__content {
     position: relative;
     z-index: 2;
@@ -193,24 +165,12 @@ button:hover {
     will-change: width border-color;
 }
 
-.top_picture__subtitle {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    font-weight: 400;
-    opacity: 0.9;
-}
-
-
 /*Aboutのスタイル*/
 .about {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     color: #222;
     padding: clamp(3rem, 10vh, 6rem) 20px;
-    position: relative;
-    z-index: 10;
-    margin-top: 0;
-    border-radius: 0;
     box-shadow: 0 0 40px rgba(0,0,0,0.08);
-    backdrop-filter: blur(10px);
   }
   
   .about__inner {
@@ -228,6 +188,7 @@ button:hover {
     position: relative;
   }
   
+  /*Aboutのタイトルの下の線のスタイル*/
   .about__title::after {
     content: '';
     position: absolute;
@@ -243,11 +204,8 @@ button:hover {
   .about__grid {
     display: grid;
     gap: 1.5rem;
-    align-items: start;
     grid-template-columns: 280px 1fr;
   }
-  
-
   
   .about__avatar {
     margin: 0;
@@ -286,23 +244,13 @@ button:hover {
     line-height: 1.8;
     color: #444;
   }
-  
-  .about__em {
-    color: #111;
-    font-weight: 700;
-  }
-  
+
   /*Hobbiesのスタイル*/
 .hobbies {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     color: #222;
     padding: clamp(3rem, 10vh, 6rem) 20px;
-    position: relative;
-    z-index: 10;
-    margin-top: 0;
-    border-radius: 0;
     box-shadow: 0 0 40px rgba(0,0,0,0.08);
-    backdrop-filter: blur(10px);
 }
 
 .hobbies__inner {
@@ -357,12 +305,7 @@ button:hover {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     color: #222;
     padding: clamp(3rem, 10vh, 6rem) 20px;
-    position: relative;
-    z-index: 10;
-    margin-top: 0;
-    border-radius: 0;
     box-shadow: 0 0 40px rgba(0,0,0,0.08);
-    backdrop-filter: blur(10px);
 }
 
 .contact__inner {
@@ -410,24 +353,6 @@ button:hover {
     margin: 0 0 2rem;
     line-height: 1.8;
     color: #444;
-}
-
-.contact__facts {
-    list-style: none;
-    margin: .5rem 0 0;
-    padding: 0;
-    display: grid;
-    gap: .4rem;
-}
-
-.contact__facts li {
-    color: #555;
-    font-size: .95rem;
-}
-
-.contact__em {
-    color: #111;
-    font-weight: 700;
 }
 
 .contact__link {
