@@ -16,7 +16,7 @@ li, a, button {
 
 /*ナビゲーションバーのスタイル*/
 .nav__checkbox {
-    display: none;
+    display: none
 }
 
 /*ナビゲーション３本線のスタイル*/
@@ -121,7 +121,7 @@ li, a, button {
     margin-bottom: 0;
 }
 
-/*top_pictureの背景のスタイル*/
+/*top_pictureの薄白背景のスタイル*/
 .top_picture::before {
     content: '';
     position: absolute;
